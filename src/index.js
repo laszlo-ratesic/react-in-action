@@ -68,38 +68,19 @@ Comment.propTypes = {
   user: PropTypes.string.isRequired,
 };
 
-class Box extends Component {
-    render() {
-        return React.createElement(
-            "div",
-            {
-                className: "Box"
-            }
-        )
-    }
-}
-
 const App = React.createElement(
-    Box,
-    {
-        id: 1,
-        user: 'patrick',
-    }
-)
-
-// const App = React.createElement(
-//   Post,
-//   {
-//     id: 1,
-//     content: " said: This is a post!",
-//     user: "mark",
-//   },
-//   React.createElement(Comment, {
-//     id: 2,
-//     user: "bob",
-//     content: " commented: wow! how cool!",
-//   })
-// );
+  Post,
+  {
+    id: 1,
+    content: " said: This is a post!",
+    user: "mark",
+  },
+  React.createElement(Comment, {
+    id: 2,
+    user: "bob",
+    content: " commented: wow! how cool!",
+  })
+);
 
 render(App, node);
 
